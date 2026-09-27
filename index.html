@@ -1,37 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Trash2Tech</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{font-family:Arial; margin:20px; line-height:1.7; max-width:800px;}
-h1{color:green;}
-hr{margin:20px 0;}
-</style>
-</head>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="trash2.css"></head>
 <body>
-
-<h1>Trash2Tech</h1>
-<p><b>E-Waste to Future Tech</b></p>
-<hr>
-
-<h2>About Us</h2>
-<p>We collect e-waste from homes and schools in Ambad and recycle it safely to protect our environment.</p>
-
-<h2>What We Do</h2>
+<div class="header"><h2>Trash2Tech - Home</h2>
+<h2><a href="NEWcentres.html">Centres</a>
+<a href="opportunity.html">Opportunity</a>
+<a href="campaign.html">Campaign</a></h2>
+<a href="login.html" style="color: aliceblue; margin-left:10px;">Login</a>
+<a href="NEWcontact.html" style="color: white; margin-left:10px;">Contact</a>
+<a href="guide.html" style="color: white; margin-left:10px;">Guide</a>
+</div>
+<div class="box">
+<h3>Welcome! <span id="u"></span></h3>
+<p>Trash2Tech is for Navi Mumbai students to convert e-waste.</p>
+<p>We have 1000+ devices collected, 400kg recycled.</p>
+<button onclick="window.location='NEWcentres.html'">Find Centres</button>
+</div>
+<div class="box" style="text-align:left;">
+<h3>Why we should think about e-waste?</h3>
 <p>
-- Free E-Waste Collection<br>
-- Safe Recycling<br>
-- Awareness Programs
+We buy new phones every 1-2 years, but where does old phone go?
+</p>
+<p>
+One house has 2-3 old chargers and 1 old mobile. Now think of whole Navi Mumbai!
 </p>
 
-<h2>Contact</h2>
-<p>
-Location: Ambad, Maharashtra<br>
-Email: trash2tech@gmail.com
-</p>
-<hr>
-<p>© 2026 Trash2Tech</p>
-
-</body>
-</html>
+</div>
+<script>document.getElementById("u").innerText = localStorage.getItem("username") || "Student";</script>
+</body></html>
