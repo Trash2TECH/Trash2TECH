@@ -1,0 +1,28 @@
+<html><head><link rel="stylesheet" href="trash2.css"></head><body>
+<div class="header"><h2>Centre Details</h2><a href="centres.html" style="color:white;">Back</a></div>
+<div class="box" id="details"></div>
+
+<div class="box">
+<h3>Request Pickup from this Centre</h3>
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="ph" placeholder="Your Phone">
+<button onclick="send()">Send Request</button>
+</div>
+
+<script>
+var centres = [
+ {name:"Eco Friend Industries", area:"A-205, TTC Industrial Area, MIDC Pawane - 400710", phone:"+91 22 2768 9020", site:"ecofriendindustries.com", map:"https://maps.google.com/?q=Eco+Friend+Industries+Pawane"},
+ {name:"Antony Revive e-Waste Pvt Ltd", area:"W-154, TTC, Pawane Village, Navi Mumbai - 400710", phone:"W-154 TTC - Contact via MPCB", site:"MPCB Authorized", map:"https://maps.google.com/?q=Antony+Revive+TTC+Pawane"},
+ {name:"E-Waste Recyclers INDIA", area:"Sector 19C, Vashi, Navi Mumbai", phone:"Available on Justdial Vashi", site:"Vashi Navi Mumbai", map:"https://maps.google.com/?q=E+Waste+Recyclers+Vashi"},
+ {name:"Sampurn Environment Solutions", area:"Mumbai - Collects from Navi Mumbai", phone:"4.1 Rating - Justdial", site:"sampurn.com", map:"https://maps.google.com/?q=Sampurn+E+Waste+Mumbai"},
+ {name:"Green World Recycling", area:"Anjur Phata, Bhiwandi", phone:"MPCB Registered 1000 MTA", site:"Thane Region", map:"https://maps.google.com/?q=Green+World+Recycling+Bhiwandi"}
+];
+var id = localStorage.getItem("centreId");
+var c = centres[id];
+document.getElementById("details").innerHTML = "<h3>"+c.name+"</h3><p><b>Address:</b> "+c.area+"</p><p><b>Phone:</b> "+c.phone+"</p><p><b>Website:</b> "+c.site+"</p><a href='"+c.map+"' target='_blank'><button>Open in Google Maps</button></a> <a href='tel:"+c.phone+"'><button style='background:blue;'>Call Now</button></a>";
+
+function send(){
+ alert("Request sent to "+c.name+"! They will call you within 2 hours for pickup in Navi Mumbai.");
+ window.location="home.html";
+}
+</script></body></html>

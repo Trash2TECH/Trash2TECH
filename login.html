@@ -1,0 +1,30 @@
+<html><head><link rel="stylesheet" href="trash2.css"></head><body>
+<div class="header"><h2>Trash2Tech</h2><p>E-waste to Start-up</p></div>
+<div class="box">
+<h3>Login</h3>
+<input type="text" id="email" placeholder="Enter email">
+<input type="password" id="pass" placeholder="Password">
+<br><button onclick="login()">Login</button>
+<p> login with email</p>
+</div>
+<div>
+    <div class="header">
+  <h2>Trash2Tech</h2>
+  <a href="home.html" style="color:white; margin:5px;">Home</a>
+  <a href="NEWcentres.html" style="color:white; margin:5px;">Centres</a>
+  <a href="opportunity.html" style="color:white; margin:5px;">Opportunity</a>
+  <a href="campaign.html" style="color:white; margin:5px;">Campaign</a>
+  <a href="login.html" style="color:white; margin:5px;">Logout</a>
+  <a href="NEWcontact.html" style="border: white; margin: 5px;">Contact</a>
+</div>
+<script>
+function login(){
+ var e = document.getElementById("email").value;
+ var p = document.getElementById("pass").value;
+ if(e=="" || p==""){ alert("fill all"); }
+ else{
+  localStorage.setItem("user", e);
+  window.location="home.html";
+ }
+}
+</script></body></html>
